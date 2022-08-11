@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+local_backend: true
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: news
+    label: News
+    folder: content/posts
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        required: true
+      - label: Publish date
+        name: date
+        widget: date
+        format: DD-MM-YYYY
+        default: ""
+      - label: Content
+        name: body
+        widget: markdown
+  - name: pages
+    label: Pages
+    files:
+      - label: Home
+        name: home
+        file: content/pages/home.md
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: true
+          - label: Description
+            name: description
+            widget: string
+            required: true
