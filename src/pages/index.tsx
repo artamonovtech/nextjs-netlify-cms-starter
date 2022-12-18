@@ -44,10 +44,8 @@ const Home: NextPage<Props> = ({ page, posts }) => {
           {posts.map(({ slug, post }) => (
             <div key={slug} className={styles.card}>
               <Link href={`/post/${slug}`}>
-                <a>
-                  <h2>{post.title}</h2>
-                  <span>{post.description}</span>
-                </a>
+                <h2>{post.title}</h2>
+                <span>{post.description}</span>
               </Link>
             </div>
           ))}
