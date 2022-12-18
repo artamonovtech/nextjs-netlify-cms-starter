@@ -2,6 +2,7 @@
   "name": "nextjs-netlify-cms",
   "version": "0.1.0",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "yarn proxy & next dev",
     "proxy": "npx netlify-cms-proxy-server",
